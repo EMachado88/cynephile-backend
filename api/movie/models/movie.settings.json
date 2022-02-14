@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "movies",
   "info": {
-    "name": "Movie"
+    "name": "Movie",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,20 +16,17 @@
       "type": "string",
       "required": true
     },
-    "description": {
+    "overview": {
       "type": "richtext"
     },
-    "media": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+    "poster_path": {
+      "type": "string"
+    },
+    "original_title": {
+      "type": "string"
+    },
+    "vote_average": {
+      "type": "decimal"
     }
   }
 }
